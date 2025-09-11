@@ -1,3 +1,8 @@
+---
+hide:
+  - footer
+---
+
 ## **Cosa ti serve !?**
 
 1. **Saper installare programmi sul tuo Computer**
@@ -10,15 +15,27 @@
 
 1. Raspberry Pi Zero 2 W
 
-2. [Raspberry Pi 3 Model A+](https://amzn.to/3nyoWjA)
+=== "Raspberry Pi 3"
+    * [Raspberry Pi 3 :material-cursor-default-click-outline:](https://amzn.to/3VLRozg)
 
-3. [Raspberry Pi 4 Model B](https://amzn.to/34YMckB)
+=== "Raspberry Pi 4"
+    * [Raspberry Pi 4 1Gb :material-cursor-default-click-outline:](https://amzn.to/4mno3X2)
+
+    * [Raspberry Pi 4 2Gb :material-cursor-default-click-outline:](https://amzn.to/4mh3Yl4)
+
+=== "Raspberry Pi 5"
+    * [Raspberry Pi 5 4Gb :material-cursor-default-click-outline:](https://amzn.to/41NeHfD)
+
+=== "BTT Pi V1.2"
+    * [BTT Pi V1.2 :material-cursor-default-click-outline:](https://amzn.to/46yRkZR)
 
 5. **Scheda micro SD (almeno 8 Gb)**
 
 6. **Alimentatore da ALMENO 2.5A ***(fondamentale)*
 
 7. **Cavo USB di buona qualità (adatto per collegare raspberry e Scheda stampante)**
+
+* [Schermo touch consigliato :material-cursor-default-click-outline:](https://amzn.to/3VJiAyz)
 
 ### **SOFTWARE**
 
@@ -243,7 +260,9 @@ A questo punto devi inserire le credenziali che di default sono:
 
 incolla questo comando e premi INVIO.
 
-*sudo apt-get install git -y*
+``` bash
+sudo apt-get install git -y
+```
 
 🠒premi INVIO.
 
@@ -256,12 +275,15 @@ incolla questo comando e premi INVIO.
 ## ➡️ **Installa KIAUH da Github**
 
 *inserisci i seguenti comandi uno dopo l'altro, inserisci il primo premi INVIO ed aspetta che venga eseguito, inserisci il secondo….così via…*
+``` bash
 
-*cd ~*
 
-*git clone https://github.com/th33xitus/kiauh.git*
+cd ~
 
-*./kiauh/kiauh.sh*
+git clone https://github.com/th33xitus/kiauh.git
+
+./kiauh/kiauh.sh
+```
 
 Se inserendo l’ultimo comando si è aperta l’interfaccia di KIAUH, procedi…
 
@@ -351,16 +373,23 @@ Se hai un solo dispositivo ne vedrai solo una, inserisci 1 e premi **INVIO.**
 
 **FINE installazione**
 
-**⚠️****  **Attenzione il flash via SD direttamente da KIAUH, su alcune schede, funziona solo se klipper è già installato sulla vostra stampante, questo perchè alcune schede richiedono un bootloader modificato per effettuare questa operazione! \
-Se hai provato a flashare il firmware direttamente da KIAUH su SD e non è successo niente questo è il motivo. \
-La soluzione è recuperare il firmware che hai compilato cioè il file Klipper.bin. \
-In questo caso nel menu ADVANCED di KIAUH scegli BUILD non BUILD+FLASH così che ti faccia compilare il firmware ma salti la procedura di flash, che farai manulamente) \
-Per recuperare il firmware:
+!!! Warning
+    Il flash via SD direttamente da KIAUH, su alcune schede, funziona solo se klipper è già installato sulla vostra stampante, questo perchè alcune schede richiedono un bootloader modificato per effettuare questa operazione!
+    Se hai provato a flashare il firmware direttamente da KIAUH su SD e non è successo niente questo è il motivo.
+
+    * La soluzione è recuperare il firmware che hai compilato cioè il file Klipper.bin.
+    In questo caso nel menu ADVANCED di KIAUH scegli BUILD non BUILD+FLASH così che ti faccia compilare il firmware ma salti la procedura di flash, che farai manulamente spostando klipper.bin sulla SD.
+
+**Per recuperare il firmware:**
 
 1. Esci da kiauh, premi B fino a quando torni nel menu iniziale e poi Q per uscire (guarda in basso a Dx) - ti troverai nel terminale su una nuova linea.
 
-2. **Inserisci questo** comando per spostare il firmware nell'interfaccia web \
-*cp ~/klipper/out/klipper.bin ~/printer_data/config*
+2. **Inserisci questo** comando per spostare il firmware nell'interfaccia web
+
+``` bash
+cp ~/klipper/out/klipper.bin ~/printer_data/config
+```
+
 
 3. Ora inserisci l'indirizzo IP nel browser per collegarti a Fluidd/Mainsail
 
