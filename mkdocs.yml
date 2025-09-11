@@ -13,20 +13,22 @@ theme:
     code: Red Hat Mono
   palette:
     # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
+    - media: "(prefers-color-scheme: light)" #utente preferisce light
       scheme: default
       toggle:
         icon: material/toggle-switch 
         name: Switch to dark mode
       primary: orange
+      accent: deep orange
 
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
+    - media: "(prefers-color-scheme: dark)" #utente preferisce dark
       scheme: slate
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to light mode
       primary: orange
+      accent: deep orange
   features:
     - content.code.copy #abilita tasto copia code block
     - navigation.footer
