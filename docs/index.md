@@ -3,6 +3,6 @@
 
 ### [Youtube :simple-youtube:](https://www.youtube.com/@3DFoxFactory3DFF ){ .md-button }
 
-### [GUIDA PER INSTALLARE KLIPPER :material-cursor-default-click-outline: ](/Installare_Klipper/Guida_Installare_klipper){ .md-button }
+### [GUIDA PER INSTALLARE KLIPPER :material-cursor-default-click-outline: ](Installare-Klipper-Italiano/Installare_Klipper/Guida_Installare_klipper/){ .md-button }
 
 
