@@ -96,3 +96,4 @@ plugins:
         - locale: en
           name: English
           build: true
+          reconfigure_search: true
