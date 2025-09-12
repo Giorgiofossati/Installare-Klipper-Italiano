@@ -88,6 +88,7 @@ plugins:
   - i18n:
       docs_structure: suffix
       fallback_to_default: True
+      reconfigure_search: true
       languages:
         - locale: it
           default: true
@@ -96,4 +97,4 @@ plugins:
         - locale: en
           name: English
           build: true
-          reconfigure_search: true
+          
