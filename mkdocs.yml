@@ -8,6 +8,7 @@ site_description: >-
 # Configuration
 theme:
   name: material
+  language: it
   font:
     text: Roboto
     code: Red Hat Mono
@@ -51,6 +52,7 @@ markdown_extensions:
       alternate_style: true
   - admonition
   - pymdownx.details
+  - md_in_html
 
 extra:
   social:
@@ -80,3 +82,17 @@ extra:
           note: >- 
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+
+plugins:
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: True
+      languages:
+        - locale: it
+          default: true
+          name: Italiano
+          build: true
+        - locale: en
+          name: English
+          build: true

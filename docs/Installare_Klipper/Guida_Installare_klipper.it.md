@@ -11,9 +11,8 @@ hide:
 
 3. **Stampante 3D**
 
-4. **Raspberry Pi :**
+4. **Raspberry Pi o SBC Alternativi :**
 
-1. Raspberry Pi Zero 2 W
 
 === "Raspberry Pi 3"
     * [Raspberry Pi 3 :material-cursor-default-click-outline:](https://amzn.to/3VLRozg)
@@ -63,7 +62,8 @@ Ci sono tante strade diverse per installare klipper.
 
 6. FINE
 
-- Quando trovi dei comandi da inserire, se sono posti su righe separate vanno copiati e incollati separatamente, prima uno, premi INVIO e aspetti che venga eseguito e poi l’altro…
+!!!
+    Quando trovi dei comandi da inserire, se sono posti su righe separate vanno copiati e incollati separatamente, prima uno, premi INVIO e aspetti che venga eseguito e poi l’altro…
 
 ## **👇  ****INIZIAM****O**
 
@@ -150,7 +150,8 @@ Per installare il pacchetto sul raspberry devi avere installato BalenaEtcher, pr
 
 ![Klipper impostazioni Wi-Fi](Images/SIS-klipper-impostazioni-wi-fi.gif)
 
-**ATTENZIONE!! IL TUTTO DEVE RESTARE TRA LE VIRGOLETTE**
+!!! note
+    **ATTENZIONE!! IL TUTTO DEVE RESTARE TRA LE VIRGOLETTE**
 
 *Il nome della rete è quello che compare su un qualsiasi dispositivo quando ti colleghi a quel wi-fi.*
 
@@ -189,7 +190,8 @@ Il Problema è che ad ogni accensione del Raspberry il Router Wi-Fi gli assegna 
 
 [http://fluiddpi.local/](http://fluiddpi.local/)
 
-Con questo indirizzo il vostro browser, individua da solo, il Raspberry…**Funziona solo se il dispositivo supporta****[ Bonjour](https://it.wikipedia.org/wiki/Bonjour)**
+!!! note
+    Con questo indirizzo il vostro browser, individua da solo, il Raspberry…**Funziona solo se il dispositivo supporta****[ Bonjour](https://it.wikipedia.org/wiki/Bonjour)**
 
 **🠒 🟠 Ricerca Manuale IP**:
 
@@ -254,7 +256,8 @@ A questo punto devi inserire le credenziali che di default sono:
 
 . Premi Invio.
 
-**⚠️ Non verrà mostrata la password mentre la digiti quindi fai attenzione!!**
+!!! warning
+     Non verrà mostrata la password mentre la digiti quindi fai attenzione!!**
 
 ➡️**  Installa GIT ***(Serve per poter clonare i file da gitHub)*
 
@@ -288,8 +291,9 @@ git clone https://github.com/th33xitus/kiauh.git
 Se inserendo l’ultimo comando si è aperta l’interfaccia di KIAUH, procedi…
 
 ↓↓ Questo è il comando che dovrai inseririe in futuro per avviare KIAUH ↓↓
+``` bash
 ./kiauh/kiauh.sh
-
+```
 ↑↑ Ricordati/segnati questo comando ↑↑
 - **Klipper è installato?**
 
@@ -319,17 +323,15 @@ Cerca il file con il nome della tua stampante o scheda, aprilo, la prima parte d
 
 Ad esempio questo è il printer.cfg di una Ender 3 V2, alla riga 2 e 3 ci viene indicato il tipo di microcontrollore e porta seriale, che ci serviranno tra poco, dalla riga 12 alla 14 ci viene indicato come trasferire il firmware sulla scheda, in questo caso tramite SD.
 
-**Attenzione!!**
-
-Dato che useremo KIAUH non c’è bisogno di copiare il file klipper.bin sulla SD faremo tutto in automatico da KIAUH. Idem se il flash avviene via USB.
-
-Devi solo essere certo di quale metodo utilizzare in modo da scegliere il comando corretto su KIAUH.
-
 **PROCEDI:**
 
 - **Accedi tramite terminale SSH**
 
-Proprio come hai fatto poco fa, apri PuTTY fai il login ed avvia KIAUH con questo comando:** ./kiauh/kiauh.sh**
+Proprio come hai fatto poco fa, apri PuTTY fai il login ed avvia KIAUH con questo comando:
+
+``` bash
+./kiauh/kiauh.sh
+```
 
 - **Scrivi 4 e premi INVIO per accedere al menu ADVANCED**
 
@@ -351,7 +353,8 @@ Premi la **freccia verso il basso** e poi **INVIO**, seleziona l’architettura 
 
 Anche qui seleziona il modello indicato nel file configurazione.
 
-##### **⚠️**** In base alla scheda per cui stai compilando klipper, potresti dover inserire altre opzioni, come la porta seriale... Abbi la cura di inserire tutto ciò che ti viene indicato nell'intestazione del file di configurazione ! Poi procedi **
+!!! warning
+    In base alla scheda per cui stai compilando klipper, potresti dover inserire altre opzioni, come la porta seriale... Abbi la cura di inserire tutto ciò che ti viene indicato nell'intestazione del file di configurazione ! Poi procedi **
 
 - **Premi Q per salvare ed uscire**
 
@@ -369,7 +372,8 @@ Se hai un solo dispositivo ne vedrai solo una, inserisci 1 e premi **INVIO.**
 
 2. **Flashing successful !**
 
-**Hai installato correttamente Klipper!**
+!!! success
+Hai installato correttamente Klipper!
 
 **FINE installazione**
 
@@ -384,7 +388,7 @@ Se hai un solo dispositivo ne vedrai solo una, inserisci 1 e premi **INVIO.**
 
 1. Esci da kiauh, premi B fino a quando torni nel menu iniziale e poi Q per uscire (guarda in basso a Dx) - ti troverai nel terminale su una nuova linea.
 
-2. **Inserisci questo** comando per spostare il firmware nell'interfaccia web
+2. **Inserisci questo** comando per spostare il firmware nell'interfaccia web(Mainsail)
 
 ``` bash
 cp ~/klipper/out/klipper.bin ~/printer_data/config
@@ -433,7 +437,9 @@ Puoi procedere in due modi:
 
 2. clicca su **+** , crea nuovo file, **rinominalo** come printer.cfg, incolla il contenuto del file di configurazione .
 
-Se la tua stampante non è tra i file già pronti dovrai modificare manualmente il file printer.cfg inserendo le sezioni richieste che trovi sulla[ documentazione ufficiale](https://www.klipper3d.org/Config_Reference.html), di riferimento anche per qualsiasi problema. *( richiede un'ottima conoscenza della propria stampante e delle funzioni di klipper )*
+Se la tua stampante non è tra i file già pronti dovrai modificare manualmente il file printer.cfg inserendo le sezioni richieste che trovi sulla[ documentazione ufficiale](https://www.klipper3d.org/Config_Reference.html), di riferimento anche per qualsiasi problema. 
+!!! Warning
+    richiede un'ottima conoscenza della propria stampante e delle funzioni di klipper
 
 - **Trova e Inserisci l’indirizzo seriale [mcu]**
 
@@ -445,7 +451,7 @@ Incolla l’indirizzo seriale che hai copiato da** KIAUH, dopo **serial:
 
 - **Salva e riavvia**
 
-Ora premi su** SALVA & RIAVVIA **oppure salva il file e poi dal terminale manda il comando** RESTART.**
+Ora premi su** SALVA & RIAVVIA.
 
 **DOPO IL RIAVVIO :**
 
@@ -478,3 +484,6 @@ Se dovessi avere ulteriori problemi, troverai tutto ciò che ti serve sapere per
 Se tutto è andato bene sarai connesso alla stampante senza problemi, la potrai controllare, visualizzare le temperature ecc..
 
 ![Enter image alt description](Images/gmI_Image_22.png)
+
+!!! question
+    Se Hai bisogno di una consulenbza completa su come installare klipper scrivi un mail a : giorgio.fossati1@gmail.com
