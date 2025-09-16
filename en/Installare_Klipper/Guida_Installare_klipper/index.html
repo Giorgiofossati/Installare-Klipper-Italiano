@@ -1,0 +1,1521 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guide Klipper firmware e stampa 3D.">
+      
+      
+        <meta name="author" content="Giorgio Fossati">
+      
+      
+        <link rel="canonical" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/en/Installare_Klipper/Guida_Installare_klipper/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../cose/code-examples/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>Guida Installare klipper - 3DFF</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-PJR0DFT6WV"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-PJR0DFT6WV",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-PJR0DFT6WV",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-you-need" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="3DFF" class="md-header__button md-logo" aria-label="3DFF" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            3DFF
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guida Installare klipper
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../Installare_Klipper/Guida_Installare_klipper/" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Installare Klipper
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cose/code-examples/" class="md-tabs__link">
+          
+  
+  
+  Cose
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="3DFF" class="md-nav__button md-logo" aria-label="3DFF" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    3DFF
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installare Klipper
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installare Klipper
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Guida Installare klipper
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guida Installare klipper
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      What you need!?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What you need!?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOFTWARE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Premise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-general-the-process-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      In general, the process is:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      👇 LET’S START
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👇 LET’S START">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-wifi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛜 Configure Wi‑Fi 🛜
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-using-a-wired-ethernet-connection-connect-the-raspberry-to-the-router-and-skip-to-step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      If using a wired Ethernet connection, connect the Raspberry to the router and skip to step (5)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#great-klipper-is-installed-on-the-raspberry" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 GREAT! Klipper is installed on the Raspberry!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎉 GREAT! Klipper is installed on the Raspberry!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#but-its-not-over-yet" class="md-nav__link">
+    <span class="md-ellipsis">
+      But it’s not over yet 😡
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-the-raspberry-on-the-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Find the Raspberry on the network
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-install-kiauh" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. INSTALL → KIAUH
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. INSTALL → KIAUH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH connection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-kiauh-from-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      ➡️ Install KIAUH from GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-klipper-to-the-printer-board-with-kiauh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flash Klipper to the printer board with KIAUH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-printercfg" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONFIGURATION printer.cfg
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CONFIGURATION printer.cfg">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errors-may-occur" class="md-nav__link">
+    <span class="md-ellipsis">
+      ERRORS MAY OCCUR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cose
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cose
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cose/code-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      What you need!?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What you need!?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOFTWARE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Premise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-general-the-process-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      In general, the process is:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      👇 LET’S START
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👇 LET’S START">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-wifi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛜 Configure Wi‑Fi 🛜
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-using-a-wired-ethernet-connection-connect-the-raspberry-to-the-router-and-skip-to-step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      If using a wired Ethernet connection, connect the Raspberry to the router and skip to step (5)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#great-klipper-is-installed-on-the-raspberry" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 GREAT! Klipper is installed on the Raspberry!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎉 GREAT! Klipper is installed on the Raspberry!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#but-its-not-over-yet" class="md-nav__link">
+    <span class="md-ellipsis">
+      But it’s not over yet 😡
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-the-raspberry-on-the-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Find the Raspberry on the network
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-install-kiauh" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. INSTALL → KIAUH
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. INSTALL → KIAUH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH connection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-kiauh-from-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      ➡️ Install KIAUH from GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-klipper-to-the-printer-board-with-kiauh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flash Klipper to the printer board with KIAUH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-printercfg" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONFIGURATION printer.cfg
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CONFIGURATION printer.cfg">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errors-may-occur" class="md-nav__link">
+    <span class="md-ellipsis">
+      ERRORS MAY OCCUR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+  <h1>Guida Installare klipper</h1>
+
+<h2 id="what-you-need"><strong>What you need!?</strong></h2>
+<ol>
+<li>Know how to install programs on a Computer</li>
+<li>Know how to copy and paste</li>
+<li>3D Printer</li>
+<li>Raspberry Pi or alternative SBCs:</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Raspberry Pi 3</label><label for="__tabbed_1_2">Raspberry Pi 4</label><label for="__tabbed_1_3">Raspberry Pi 5</label><label for="__tabbed_1_4">BTT Pi V1.2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><a href="https://amzn.to/3VLRozg">Raspberry Pi 3 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span></a></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>
+<p><a href="https://amzn.to/4mno3X2">Raspberry Pi 4 1Gb <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span></a></p>
+</li>
+<li>
+<p><a href="https://amzn.to/4mh3Yl4">Raspberry Pi 4 2Gb <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span></a></p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><a href="https://amzn.to/41NeHfD">Raspberry Pi 5 4Gb <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span></a></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><a href="https://amzn.to/46yRkZR">BTT Pi V1.2 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<ol>
+<li>micro SD card (at least 8 GB)</li>
+<li>Power supply of AT LEAST 2.5A (critical)</li>
+<li>
+<p>A good quality USB cable (to connect the Raspberry and the printer’s board)</p>
+</li>
+<li>
+<p><a href="https://amzn.to/3VJiAyz">Recommended touch display <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span></a></p>
+</li>
+</ol>
+<h3 id="software">SOFTWARE</h3>
+<ol>
+<li><a href="https://www.balena.io/etcher/">Balena Etcher</a> (to write the OS image to the SD card)</li>
+<li><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a> (program to send commands to the Raspberry remotely)</li>
+</ol>
+<h3 id="premise">Premise</h3>
+<p>There are many different ways to install Klipper.</p>
+<p><strong>This guide was created to make the installation as simple as possible without skipping anything, so it may be repetitive at times.</strong></p>
+<h3 id="in-general-the-process-is">In general, the process is:</h3>
+<ol>
+<li>
+<p>Install an Operating System (OS) on the Raspberry Pi. (In this guide, the Fluidd or MainSail bundle will be installed, which already includes the operating system, web interface, Moonraker, and Klipper, all preinstalled. Other guides install the OS first and then Fluidd or Mainsail; the process is equivalent. Since KIAUH will also be installed, switching Fluidd to Mainsail later is trivial.)</p>
+</li>
+<li>
+<p>Enter Wi‑Fi credentials to connect to the wireless network or plug in an Ethernet cable. Once an OS and internet connection are in place, a PC can connect and send commands to the Raspberry via a terminal.</p>
+</li>
+<li>
+<p>Install the necessary packages: Klipper, the web interface, and Moonraker. (KIAUH will be used to automate the commands; following this guide, everything will be installed in one go!)</p>
+</li>
+<li>
+<p>Flash the Klipper firmware onto the printer’s control board. (If the printer model is common, a ready-made configuration with all info will be in printer.cfg; otherwise, the process is explained.)</p>
+</li>
+<li>
+<p>Configure the printer.cfg file so the printer works correctly.</p>
+</li>
+<li>
+<p>Done</p>
+</li>
+</ol>
+<p>!!! 
+    When commands must be entered and they are on separate lines, copy and paste them one at a time: paste the first, press ENTER and wait for it to complete, then the next…</p>
+<h2 id="lets-start">👇 LET’S START</h2>
+<ol>
+<li>Download FluiddPI / MainSail</li>
+</ol>
+<p>Both Fluidd and MainSail provide an installation bundle that already contains everything needed for Klipper.</p>
+<p>By installing this image file (.img) the following are installed in one go: Klipper, Moonraker, and Fluidd/MainSail.</p>
+<p>Proceed by downloading the .zip of the preferred interface:</p>
+<ul>
+<li>
+<p><strong><a href="https://github.com/mainsail-crew/MainsailOS/releases">MainSail</a></strong></p>
+</li>
+<li>
+<p><strong><a href="https://github.com/fluidd-core/FluiddPI/releases">FluiddPI</a></strong></p>
+</li>
+</ul>
+<p>From the GitHub page <strong>download the most recent .zip Latest (the top-most one)</strong></p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/6M1_Image_1.png" /></p>
+<ol>
+<li>Install FluiddPI to the Raspberry’s SD</li>
+</ol>
+<p>To install the bundle on the Raspberry, BalenaEtcher must be installed. It prepares the SD card for the Raspberry and writes the bundle.</p>
+<p>➡️ Open Balena Etcher</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/7LA_Image_2.jpeg" /></p>
+<p>➡️ Click Flash from file</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/3KT_Image_3.jpeg" /></p>
+<p>➡️ Select the .zip file downloaded</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/8ZN_Image_4.jpeg" /></p>
+<p>➡️ Click Select Target</p>
+<p>➡️ Select the Raspberry’s SD card, and click Select</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/U38_Image_5.jpeg" /></p>
+<p>➡️ The third button will activate, <strong>click FLASH</strong>!</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/TX3_Image_6.jpeg" /></p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/VYe_Image_7.jpeg" /></p>
+<p>➡️ Wait for the process to complete (about 10–15 minutes)</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/trR_Image_8.jpeg" />
+👍</p>
+<p>➡️ Eject and then reinsert the SD card into the PC</p>
+<ul>
+<li>Once reinserted, the SD will appear with a new name: boot</li>
+</ul>
+<h3 id="configure-wifi">🛜 Configure Wi‑Fi 🛜</h3>
+<h3 id="if-using-a-wired-ethernet-connection-connect-the-raspberry-to-the-router-and-skip-to-step-5">If using a wired Ethernet connection, connect the Raspberry to the router and skip to step (5)</h3>
+<ul>
+<li>Open the files on the boot volume</li>
+<li>Look for the file named: wpa-supplicant.txt</li>
+</ul>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/7rx_Image_9.png" /></p>
+<ul>
+<li>Open it with Notepad (on Mac, pay attention and follow the instructions in the first lines of the file.)</li>
+</ul>
+<p>Depending on the security type (password) used by the Wi‑Fi network, uncomment the correct section:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>→ ## WPA/WPA2 → in 99% of cases this is the section if the Wi‑Fi has an alphanumeric password…</p>
+<p>→ ## Open/unsecured → use this section if the Wi‑Fi has no password…</p>
+</div>
+<ul>
+<li>Now remove the # characters, only the single ones, under the section chosen: WPA/WPA2 …</li>
+<li>Delete the highlighted placeholders and replace them with the correct Wi‑Fi name and correct password!</li>
+<li>ssid=”put SSID here” → put the network name here</li>
+<li>psk=”put password here” → put the password here</li>
+</ul>
+<p><img alt="Klipper impostazioni Wi-Fi" src="../../../Installare_Klipper/Images/SIS-klipper-impostazioni-wi-fi.gif" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ATTENTION!! EVERYTHING MUST REMAIN BETWEEN QUOTATION MARKS</p>
+</div>
+<p>The network name is what appears on any device when connecting to that Wi‑Fi.</p>
+<ul>
+<li>💾  Save the file.</li>
+</ul>
+<p>➡️ Insert the SD card into the Raspberry</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/EhR_Image_11.png" /></p>
+<p>➡️ Power the Raspberry to boot it</p>
+<p>It is important to use a power supply that provides <strong>at least 2.5A</strong>, otherwise issues due to lack of power will occur.</p>
+<p>➡️ Wait a few minutes</p>
+<p>Wait for the OS installation to finish; wait until the green LED stops flashing frantically.</p>
+<h3 id="great-klipper-is-installed-on-the-raspberry">🎉 GREAT! Klipper is installed on the Raspberry!</h3>
+<h4 id="but-its-not-over-yet">But it’s not over yet 😡</h4>
+<p>Friendly tip: shut down the Raspberry and power it back on; sometimes after installation it won’t connect until it is rebooted. To be safe, reboot it anyway before proceeding…</p>
+<h3 id="find-the-raspberry-on-the-network">🔎 Find the Raspberry on the network</h3>
+<p>Each time the printer is to be controlled, the Raspberry’s IP address must be entered in the browser.</p>
+<p>Identifying the IP can be a hassle if this is a first-time Raspberry use.</p>
+<p>The issue is that at each Raspberry boot the Wi‑Fi router assigns an IP, and it may change, so it must be identified again (not always).</p>
+<p>There are two methods to find the IP:</p>
+<p>→ 🟢 The simplest way:</p>
+<p><a href="http://fluiddpi.local/">http://fluiddpi.local/</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With this address the browser identifies the Raspberry automatically… Works only if the device supports Bonjour...</p>
+</div>
+<p>→ 🟠 Manual IP search:</p>
+<p>If http://fluiddpi.local/ doesn’t work, manually search for the IP by accessing the Wi‑Fi router.</p>
+<p>The router is generally reachable at this address:</p>
+<p>👉 <a href="http://192.168.0.1"> 192.168.0.1</a> </p>
+<p>➡️ Log in to the router</p>
+<p>➡️ Look for the section where all connected Wireless devices appear.</p>
+<p>One of the IPs shown will be the Raspberry.</p>
+<p>Each router has a different interface; if it isn’t clear, search Google for the procedure for the specific router model.</p>
+<p>For example, on a D-Link router:</p>
+<p>➡️ Router Login → Advanced → Status → Wireless</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/PJM_Image_12.png" /></p>
+<h2 id="5-install-kiauh">5. INSTALL → KIAUH</h2>
+<p>Now that the IP address is known, it is possible to access the Raspberry and send commands via PuTTY.</p>
+<p>KIAUH will be installed; it will help in the next steps and in the future for making changes or updating Klipper and its components.</p>
+<ol>
+<li><strong>Install PuTTY and open it</strong></li>
+</ol>
+<p>👉 <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a>(program to send commands to the Raspberry remotely)</p>
+<h3 id="ssh-connection">SSH connection</h3>
+<p>➡️ Open PuTTY</p>
+<p>➡️ Enter the IP address found earlier or <a href="http://fluiddpi.local/"> fluiddpi.local</a></p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/ETP_Image_13.png" /></p>
+<p>➡️ Click Open.</p>
+<p>➡️ Accept the warning dialog.</p>
+<ul>
+<li>Raspberry login</li>
+</ul>
+<p>Now enter the default credentials:</p>
+<ul>
+<li>Username: pi</li>
+<li>Password: raspberry</li>
+</ul>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/dYL_Image_14.png" /></p>
+<p>➡️ Enter: pi</p>
+<p>Press Enter.</p>
+<p>➡️ Enter the password: raspberry</p>
+<p>Press Enter.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The password will not be shown while typing; be careful!</p>
+</div>
+<p>➡️ Install GIT (Required to clone files from GitHub)</p>
+<p>Paste this command and press ENTER.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>-y
+</span></code></pre></div>
+<p>Press ENTER.</p>
+<p>Enter the password again if prompted.</p>
+<p>→ The installation is complete when the cursor returns to a new blank line, like this…</p>
+<h2 id="install-kiauh-from-github">➡️ Install KIAUH from GitHub</h2>
+<p>Enter the following commands one after the other: enter the first, press ENTER and wait for completion, then the second… and so on…</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>~
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/th33xitus/kiauh.git
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>./kiauh/kiauh.sh
+</span></code></pre></div>
+<p>If after entering the last command the KIAUH interface opened, proceed…</p>
+<p>↓↓ This is the command to run in the future to start KIAUH ↓↓
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./kiauh/kiauh.sh
+</span></code></pre></div></p>
+<p>↑↑ Remember/note this command ↑↑</p>
+<ul>
+<li>Is Klipper installed?
+<img alt="Enter image alt description" src="../../../Installare_Klipper/Images/hNc_Image_16.png" /></li>
+</ul>
+<p>If everything went well, KIAUH Main Menu should show installed: 1 next to Klipper.</p>
+<p>On the left are the commands available; on the right is the system status.</p>
+<h2 id="flash-klipper-to-the-printer-board-with-kiauh">Flash Klipper to the printer board with KIAUH</h2>
+<p>Now Klipper must be installed on the printer’s microcontroller board.</p>
+<p>The procedure varies depending on the printer’s control board.</p>
+<p>For example, if using an 8‑bit board with ATmega2560, firmware flashing is done via USB, as with Arduino.</p>
+<p>On 32‑bit boards like SKR 1.4, the firmware must be copied onto the SD card and will be installed on the printer’s next reboot.</p>
+<p>In the configuration examples all instructions are provided. If nothing is said about how to flash the firmware, it is assumed to be via USB; otherwise the procedure is written there.</p>
+<p>These files can be found on <a href="https://github.com/Klipper3d/klipper/tree/master/config"> GitHub di Klipper</a> or from the interface by going to: <strong>Configuration → CONFIG_EXAMPLES</strong></p>
+<p>Find the file for the specific printer or board, open it; the first part is commented and contains all needed information.</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/6uM_Image_17.png" /></p>
+<p>For example, this is the Ender 3 V2 printer.cfg; lines 2 and 3 indicate the microcontroller type and serial port, which are needed shortly; lines 12 to 14 indicate how to transfer the firmware to the board—in this case via SD.</p>
+<p><strong>PROCEED:</strong></p>
+<ul>
+<li><strong>Access via SSH terminal</strong></li>
+</ul>
+<p>Just like a moment ago, open PuTTY, log in, and launch KIAUH with: 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./kiauh/kiauh.sh
+</span></code></pre></div>
+- <strong>Type 4 and press ENTER to access the ADVANCED menu</strong></p>
+<ul>
+<li><strong>Type 6 and press ENTER → Get MCU ID</strong></li>
+</ul>
+<p>This command returns the printer board’s serial address. This verifies the Raspberry sees the board; this address will be needed later, so copy it now. In PuTTY, copy with right-click.</p>
+<ul>
+<li>
+<p><strong>Type 5 and press ENTER → [Build + Flash]</strong></p>
+<p>With this command the Raspberry will compile the firmware and then install it on the board.</p>
+</li>
+</ul>
+<p>After a few seconds the build window opens →</p>
+<ul>
+<li><strong>Select Micro-controller Architecture</strong></li>
+</ul>
+<p>Press the down arrow and then ENTER; select the microcontroller architecture found in the example configuration file. Then ENTER.</p>
+<ul>
+<li><strong>Select Processor model</strong></li>
+</ul>
+<p>Again select the model indicated in the configuration file.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Depending on the board for which Klipper is being compiled, other options might be required, such as the serial port… Carefully enter everything requested in the configuration file header! Then proceed.</p>
+</div>
+<ul>
+<li><strong>Press Q to save and exit</strong></li>
+<li><strong>Select the Flash method</strong></li>
+</ul>
+<p><strong>1</strong> if via USB – <strong>2</strong> if via SD card</p>
+<ol>
+<li><strong>Select the connection type between Raspberry and printer</strong></li>
+<li><strong>Select the printer board address</strong></li>
+</ol>
+<p>If there is only one device, only one will be listed; enter 1 and press ENTER.</p>
+<ol>
+<li><strong>Type Y to confirm and wait for the process to complete</strong></li>
+<li><strong>Flashing successful!</strong></li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Klipper has been installed correctly!</p>
+</div>
+<p><strong>End of installation</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Flashing via SD directly from KIAUH, on some boards, only works if Klipper is already installed on the printer; some boards require a modified bootloader to perform this operation!
+If an attempt was made to flash the firmware directly from KIAUH to SD and nothing happened, this is the reason.</p>
+<ul>
+<li>The solution is to retrieve the compiled firmware file, Klipper.bin.
+In this case, in KIAUH’s ADVANCED menu choose BUILD, not BUILD+FLASH, so it compiles the firmware but skips flashing, which will be done manually by moving klipper.bin onto the SD.</li>
+</ul>
+</div>
+<p>**To retrieve the firmware:
+**
+1. Exit KIAUH; press B until returning to the main menu and then Q to exit (see bottom right) — the terminal prompt will be on a new line.</p>
+<ol>
+<li>Enter this command to move the firmware into the web interface (Mainsail)</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cp<span class="w"> </span>~/klipper/out/klipper.bin<span class="w"> </span>~/printer_data/config
+</span></code></pre></div>
+<ol>
+<li>
+<p>Now enter the IP address in the browser to connect to Fluidd/Mainsail</p>
+</li>
+<li>
+<p>Go to the section where the config files are; the Klipper.bin file will be there</p>
+</li>
+<li>
+<p>Right click -&gt; Download</p>
+</li>
+<li>
+<p>Copy Klipper.bin to an SD card and rename it to firmware.bin (some boards require a random name as long as it differs from the one previously used).</p>
+</li>
+<li>
+<p>Power off the printer and insert the SD</p>
+</li>
+<li>
+<p>Power on the printer and wait a few seconds for flashing to complete.</p>
+</li>
+</ol>
+<h2 id="configuration-printercfg">CONFIGURATION <em>printer.cfg</em></h2>
+<p>In Klipper, the printer’s configuration is done via the <strong>printer.cfg</strong> file, inside which all printer specifications must be provided; it is critical that it contains everything required. The example files seen earlier are ready-made <strong>printer.cfg </strong>files for that printer model.</p>
+<p>These files are created by users and then verified, so they should be correct, but not always.</p>
+<p>The correct serial port must always be specified; otherwise the Raspberry will not communicate with the printer.</p>
+<p><strong>- Use KIAUH to find and copy the serial port address</strong></p>
+<p>If it wasn’t copied earlier,</p>
+<p><strong>launch KIAUH → Advanced → [Get MCU ID]</strong></p>
+<ul>
+<li>
+<p>copy the entire /dev/serial/by-id/…. string</p>
+</li>
+<li>
+<p>Open the web interface (Fluidd, MainSail...)
+<img alt="Enter image alt description" src="../../../Installare_Klipper/Images/ICD_Image_18.png" /></p>
+</li>
+</ul>
+<p>Go to the configuration section</p>
+<ul>
+<li><strong>Create or retrieve the printer.cfg for the printer</strong></li>
+</ul>
+<p>Two approaches:</p>
+<ol>
+<li>
+<p>Download the configuration file that has been used so far, click + and upload the example file for the printer → rename it as printer.cfg.</p>
+</li>
+<li>
+<p>Click +, create a new file, rename it as printer.cfg, paste the contents of the configuration file.</p>
+</li>
+</ol>
+<p>If the printer is not among the ready-made files, the printer.cfg must be edited manually by entering the required sections found in the <a href="https://www.klipper3d.org/Config_Reference.html">Official Documentation</a>, which is also the reference for any issue. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This requires excellent knowledge of the specific printer and Klipper’s functions.</p>
+</div>
+<ul>
+<li><strong>Find and enter the [mcu] serial</strong></li>
+</ul>
+<p>Open <strong>printer.cfg ** and find the </strong>[mcu]** section.</p>
+<p>Paste the serial address copied from KIAUH after serial:</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/sZJ_Image_19.png" /></p>
+<ul>
+<li><strong>Save and restart</strong></li>
+</ul>
+<p><strong>Now click SAVE \&amp; RESTART</strong></p>
+<p>AFTER RESTART:</p>
+<h3 id="errors-may-occur">ERRORS MAY OCCUR</h3>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/vHc_Image_20.png" /></p>
+<p>The interface will indicate which errors must be resolved.</p>
+<p>This is normal because required sections for Fluidd must be added; if using another interface, they may differ!</p>
+<p>These errors are related to the interface being used; Fluidd, in this case, requires these 3 parameters to function correctly.</p>
+<p>To resolve, go to the documentation for the interface and look for the Configuration section, where the parameters to be added are listed.</p>
+<p>-&gt;<a href="https://docs.fluidd.xyz/configuration/initial_setup"> </a><a href="https://docs.fluidd.xyz/configuration/initial_setup">Configuration di Fluidd</a></p>
+<p>-&gt;<a href="https://docs.mainsail.xyz/configuration"> </a><a href="https://docs.mainsail.xyz/configuration">Configuration di Mainsail</a></p>
+<p><img alt="Fluidd Config parameters" src="../../../Installare_Klipper/Images/s9c-fluidd-config-parameters.png" /></p>
+<p>As shown in the documentation, the exact parameters that caused the errors are listed.</p>
+<p>Copy and add them one after another into printer.cfg.</p>
+<p>Save and do a RESTART (Restart the firmware).</p>
+<p>If further issues arise, everything needed to resolve them can be found in the <a href="https://www.klipper3d.org/Config_Reference.html">Official documentation</a> .</p>
+<p>If everything went well, the printer will be connected without issues; it can be controlled and temperatures viewed, etc.</p>
+<p><img alt="Enter image alt description" src="../../../Installare_Klipper/Images/gmI_Image_22.png" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
+        
+          
+          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Welcome
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../cose/code-examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Code examples">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Code examples
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@3DFoxFactory3DFF" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.footer", "navigation.tabs", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

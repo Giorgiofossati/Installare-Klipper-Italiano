@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://giorgiofossati.github.io/Installare-Klipper-Italiano/</loc>
+        <lastmod>2025-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/en/"/>
+    </url>
+    <url>
+        <loc>https://giorgiofossati.github.io/Installare-Klipper-Italiano/Installare_Klipper/Guida_Installare_klipper/</loc>
+        <lastmod>2025-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/Installare_Klipper/Guida_Installare_klipper/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/en/Installare_Klipper/Guida_Installare_klipper/"/>
+    </url>
+    <url>
+        <loc>https://giorgiofossati.github.io/Installare-Klipper-Italiano/cose/code-examples/</loc>
+        <lastmod>2025-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/cose/code-examples/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/en/cose/code-examples/"/>
+    </url>
+    <url>
+        <loc>https://giorgiofossati.github.io/Installare-Klipper-Italiano/en/</loc>
+        <lastmod>2025-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/en/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/"/>
+    </url>
+    <url>
+        <loc>https://giorgiofossati.github.io/Installare-Klipper-Italiano/en/Installare_Klipper/Guida_Installare_klipper/</loc>
+        <lastmod>2025-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/en/Installare_Klipper/Guida_Installare_klipper/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/Installare_Klipper/Guida_Installare_klipper/"/>
+    </url>
+    <url>
+        <loc>https://giorgiofossati.github.io/Installare-Klipper-Italiano/en/cose/code-examples/</loc>
+        <lastmod>2025-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/en/cose/code-examples/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://giorgiofossati.github.io/Installare-Klipper-Italiano/cose/code-examples/"/>
+    </url>
+</urlset>
